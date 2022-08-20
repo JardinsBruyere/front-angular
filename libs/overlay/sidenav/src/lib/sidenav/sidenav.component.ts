@@ -11,8 +11,12 @@ export class SidenavComponent implements OnInit{
   buttonList: BoutonSideNav[] = [];
   ngOnInit(): void {
     this.buttonList.push(
+      new BoutonSideNav("/home","Accueil"),
       new BoutonSideNav("/listeCapteur","Liste des capteurs"),
-      new BoutonSideNav("/help","Aide")
+      new BoutonSideNav("/graphe","Grapique"),
+      new BoutonSideNav("/admi","Administration"),
+      new BoutonSideNav("/help","Aide"),
+      new BoutonSideNav("/about","A propos")
     )
   }
 

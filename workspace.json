@@ -4,7 +4,9 @@
   "projects": {
     "client-app": "apps/client-app",
     "client-app-e2e": "apps/client-app-e2e",
+    "default": "libs/default",
     "demonstration": "libs/demonstration",
+    "home": "libs/home",
     "overlay-sidenav": "libs/overlay/sidenav",
     "overlay-toolbar": "libs/overlay/toolbar"
   }

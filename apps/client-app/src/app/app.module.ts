@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { HelpComponent } from '@jardin-bruyere/demonstration';
 import {OverlaySidenavModule} from "../../../../libs/overlay/sidenav/src";
+import {DefaultComponent} from "@jardin-bruyere/default";
+import {HomeComponent} from "../../../../libs/home/src/lib/home/home.component";
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -23,6 +25,14 @@ import {OverlaySidenavModule} from "../../../../libs/overlay/sidenav/src";
           path: 'help',
           component: HelpComponent,
         },
+        {
+          path:'home',
+          component:HomeComponent,
+        },
+        {
+          path:'**',
+          component:DefaultComponent,
+        }
       ],
       { initialNavigation: 'enabledBlocking' }
     ),

@@ -1,0 +1,38 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/home/src",
+  "prefix": "jardin-bruyere",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/home"],
+      "options": {
+        "project": "libs/home/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/home/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/home/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/home"],
+      "options": {
+        "jestConfig": "libs/home/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/home/**/*.ts", "libs/home/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
