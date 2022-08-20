@@ -1,0 +1,11 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> Menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> Fermer </mat-icon>
+  </button>
+  Site de démonstration des jardins de la bruyere
+</mat-toolbar>

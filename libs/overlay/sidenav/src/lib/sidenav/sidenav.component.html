@@ -1,0 +1,29 @@
+<jardin-bruyere-tootlbar [sidenav]="sidenav"></jardin-bruyere-tootlbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="" class="mat-elevation-z8">
+    <h4 class="name">Jardin de la bruyere</h4>
+    <p class="designation">Site de démonstration</p>
+
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/">
+      <span>Acceuil</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/profile">
+      <span>Test 1</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/about">
+      <span>Informations</span>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/help">
+      <span>Aide</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

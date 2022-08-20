@@ -1,5 +1,11 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "client-app": "apps/client-app",
+    "client-app-e2e": "apps/client-app-e2e",
+    "demonstration": "libs/demonstration",
+    "overlay-sidenav": "libs/overlay/sidenav",
+    "overlay-toolbar": "libs/overlay/toolbar"
+  }
 }
