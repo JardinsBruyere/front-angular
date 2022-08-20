@@ -1,0 +1,11 @@
+<table>
+  <tr *ngFor="let bouton of buttonList; let i = index">
+    <td>
+      <button mat-button
+              class="mat-button"
+              routerLink="{{bouton.link}}">
+        {{bouton.name}}
+      </button>
+    </td>
+  </tr>
+</table>

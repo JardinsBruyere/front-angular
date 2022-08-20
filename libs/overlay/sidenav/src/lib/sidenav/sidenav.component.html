@@ -4,27 +4,9 @@
   <mat-sidenav #sidenav="" class="mat-elevation-z8">
     <h4 class="name">Jardin de la bruyere</h4>
     <p class="designation">Site de démonstration</p>
-
     <mat-divider></mat-divider>
-    <span>{{buttonList.length}}</span>
-    <table>
-      <tr>
-        <th style="width:50%"><b>List rooms </b></th>
-        <th></th>
-      </tr>
-      <tr *ngFor="let bouton of buttonList; let i = index">
-        <td><button mat-button
-                    class="mat-button"
-                    routerLink="{{bouton.link}}">
-          {{bouton.name}}
-          </button></td>
-      </tr>
-    </table>
-    <mat-divider></mat-divider>
-
-    <button mat-button class="menu-button" routerLink="/help">
-      <span>Aide</span>
-    </button>
+    <jardin-bruyere-displaybutton [buttonList]="buttonList">
+    </jardin-bruyere-displaybutton>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">

@@ -5,7 +5,8 @@ import { OverlayToolbarModule } from '@jardin-bruyere/overlay-toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
-import {MatButtonModule} from "@angular/material/button";
+import { MatButtonModule } from '@angular/material/button';
+import { DisplaybuttonComponent } from './displaybutton/displaybutton.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import {MatButtonModule} from "@angular/material/button";
     RouterModule,
     MatButtonModule,
   ],
-  declarations: [SidenavComponent],
+  declarations: [SidenavComponent, DisplaybuttonComponent],
   exports: [SidenavComponent],
 })
 export class OverlaySidenavModule {}
