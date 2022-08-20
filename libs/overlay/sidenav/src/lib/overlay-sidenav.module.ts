@@ -5,6 +5,7 @@ import { OverlayToolbarModule } from '@jardin-bruyere/overlay-toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatDividerModule,
     RouterModule,
+    MatButtonModule,
   ],
   declarations: [SidenavComponent],
   exports: [SidenavComponent],
