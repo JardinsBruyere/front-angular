@@ -9,6 +9,7 @@ import {HomeComponent} from "../../../../libs/home/src/lib/home/home.component";
 import {DefaultComponent} from "@jardin-bruyere/default";
 import {HttpClientModule} from "@angular/common/http";
 import {MenutoolbarComponent} from "../../../../libs/menu/src/lib/menutoolbar/menutoolbar.component";
+import {AboutComponent} from "../../../../libs/demonstration/src/lib/about/about.component";
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, MenutoolbarComponent],
@@ -23,6 +24,10 @@ import {MenutoolbarComponent} from "../../../../libs/menu/src/lib/menutoolbar/me
         {
           path:'home',
           component:HomeComponent,
+        },
+        {
+          path:'about',
+          component:AboutComponent,
         },
         {
           path:'',
