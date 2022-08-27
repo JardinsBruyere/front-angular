@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {DataService} from "@jardin-bruyere/api-service";
 
 @Component({
   selector: 'jardin-bruyere-default',
@@ -6,8 +7,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./default.component.less'],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class DefaultComponent implements OnInit {
-  constructor() {}
+export class DefaultComponent {
 
-  ngOnInit(): void {}
 }

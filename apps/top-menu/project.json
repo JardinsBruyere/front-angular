@@ -1,0 +1,90 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/top-menu/src",
+  "prefix": "jardin-bruyere",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/top-menu",
+        "index": "apps/top-menu/src/index.html",
+        "main": "apps/top-menu/src/main.ts",
+        "polyfills": "apps/top-menu/src/polyfills.ts",
+        "tsConfig": "apps/top-menu/tsconfig.app.json",
+        "inlineStyleLanguage": "less",
+        "assets": ["apps/top-menu/src/favicon.ico", "apps/top-menu/src/assets"],
+        "styles": ["apps/top-menu/src/styles.less"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/top-menu/src/environments/environment.ts",
+              "with": "apps/top-menu/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "top-menu:build:production"
+        },
+        "development": {
+          "browserTarget": "top-menu:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 8301
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "top-menu:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/top-menu/**/*.ts", "apps/top-menu/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/top-menu"],
+      "options": {
+        "jestConfig": "apps/top-menu/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -2,12 +2,14 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "client-app": "apps/client-app",
-    "client-app-e2e": "apps/client-app-e2e",
+    "api-service": "libs/api-service",
+    "client": "apps/client",
+    "client-e2e": "apps/client-e2e",
     "default": "libs/default",
     "demonstration": "libs/demonstration",
     "home": "libs/home",
-    "overlay-sidenav": "libs/overlay/sidenav",
-    "overlay-toolbar": "libs/overlay/toolbar"
+    "menu": "libs/menu",
+    "top-menu": "apps/top-menu",
+    "top-menu-e2e": "apps/top-menu-e2e"
   }
 }

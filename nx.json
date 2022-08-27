@@ -39,5 +39,5 @@
       "style": "less"
     }
   },
-  "defaultProject": "client-app"
+  "defaultProject": "client"
 }

@@ -15,9 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@jardin-bruyere/api-service": ["libs/api-service/src/index.ts"],
       "@jardin-bruyere/default": ["libs/default/src/index.ts"],
       "@jardin-bruyere/demonstration": ["libs/demonstration/src/index.ts"],
       "@jardin-bruyere/home": ["libs/home/src/index.ts"],
+      "@jardin-bruyere/menu": ["libs/menu/src/index.ts"],
+      "@jardin-bruyere/menu-sidenav": ["libs/menu/sidenav/src/index.ts"],
       "@jardin-bruyere/overlay-toolbar": ["libs/overlay/toolbar/src/index.ts"]
     }
   },

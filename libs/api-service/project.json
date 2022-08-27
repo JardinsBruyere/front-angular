@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/api-service/src",
+  "prefix": "jardin-bruyere",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/api-service"],
+      "options": {
+        "project": "libs/api-service/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/api-service/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/api-service/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api-service"],
+      "options": {
+        "jestConfig": "libs/api-service/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/api-service/**/*.ts",
+          "libs/api-service/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,11 @@
+<ul class="nav navbar-nav">
+  <li *ngFor="let bouton of buttonList">
+    <button mat-button
+            class="mat-button"
+            routerLink="{{bouton.link}}">
+      {{bouton.name}}
+    </button>
+  </li>
+</ul>
+
+<router-outlet> </router-outlet>
