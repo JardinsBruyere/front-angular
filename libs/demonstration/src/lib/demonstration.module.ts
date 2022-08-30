@@ -9,6 +9,6 @@ export const demonstrationRoutes: Route[] = [];
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [HelpComponent, AboutComponent],
-  exports: [HelpComponent],
+  exports: [HelpComponent,AboutComponent],
 })
 export class DemonstrationModule {}

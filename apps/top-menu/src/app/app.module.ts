@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import {HelpComponent} from "@jardin-bruyere/demonstration";
-import {HomeComponent} from "../../../../libs/home/src/lib/home/home.component";
 import {DefaultComponent} from "@jardin-bruyere/default";
 import {HttpClientModule} from "@angular/common/http";
-import {MenutoolbarComponent} from "../../../../libs/menu/src/lib/menutoolbar/menutoolbar.component";
-import {AboutComponent} from "../../../../libs/demonstration/src/lib/about/about.component";
+import {AboutComponent} from "@jardin-bruyere/demonstration";
+import {MenuModule} from "@jardin-bruyere/menu";
+import {HomeComponent} from "@jardin-bruyere/home";
+import {AdmiComponent} from "@jardin-bruyere/admi";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, MenutoolbarComponent],
+  declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
@@ -22,23 +24,30 @@ import {AboutComponent} from "../../../../libs/demonstration/src/lib/about/about
           component: HelpComponent,
         },
         {
-          path:'home',
-          component:HomeComponent,
+          path: 'home',
+          component: HomeComponent,
         },
         {
-          path:'about',
-          component:AboutComponent,
+          path: 'about',
+          component: AboutComponent,
         },
         {
-          path:'',
-          component:HomeComponent,
+          path:'admi',
+          component:AdmiComponent,
         },
         {
-          path:'**',
-          component:DefaultComponent,
+          path: '',
+          component: HomeComponent,
+        },
+        {
+          path: '**',
+          component: DefaultComponent,
         }
       ]),
     HttpClientModule,
+    MenuModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

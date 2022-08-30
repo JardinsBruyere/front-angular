@@ -4,6 +4,9 @@ import { DefaultComponent } from './default/default.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [DefaultComponent],
+    declarations: [DefaultComponent],
+    exports: [
+        DefaultComponent
+    ]
 })
 export class DefaultModule {}

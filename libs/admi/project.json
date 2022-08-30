@@ -1,0 +1,38 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/admi/src",
+  "prefix": "jardin-bruyere",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/admi"],
+      "options": {
+        "project": "libs/admi/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/admi/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/admi/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/admi"],
+      "options": {
+        "jestConfig": "libs/admi/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/admi/**/*.ts", "libs/admi/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

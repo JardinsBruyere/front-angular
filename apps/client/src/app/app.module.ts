@@ -8,18 +8,15 @@ import {HelpComponent} from "@jardin-bruyere/demonstration";
 import {HomeComponent} from "../../../../libs/home/src/lib/home/home.component";
 import {DefaultComponent} from "@jardin-bruyere/default";
 import {HttpClientModule} from "@angular/common/http";
-import {MenutoolbarComponent} from "../../../../libs/menu/src/lib/menutoolbar/menutoolbar.component";
-import {AboutComponent} from "../../../../libs/demonstration/src/lib/about/about.component";
-import {SidenavComponent} from "../../../../libs/menu/src/lib/sidenav/sidenav.component";
+import {AboutComponent} from "@jardin-bruyere/demonstration";
 import {MatSidenavModule} from "@angular/material/sidenav";
-import {DisplaybuttonComponent} from "../../../../libs/menu/src/lib/displaybutton/displaybutton.component";
 import {MatDividerModule} from "@angular/material/divider";
-import {TootlbarComponent} from "../../../../libs/menu/src/lib/tootlbar/tootlbar.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MenuModule} from "@jardin-bruyere/menu";
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, MenutoolbarComponent, SidenavComponent, DisplaybuttonComponent, TootlbarComponent],
+  declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
@@ -49,7 +46,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatSidenavModule,
     MatDividerModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],
