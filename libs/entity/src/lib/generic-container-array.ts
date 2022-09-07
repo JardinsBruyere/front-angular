@@ -1,22 +1,20 @@
 import {GenericContainer} from "./generic-container";
 
 export class GenericContainerArray {
-  get listOfGenericContainer(): Array<GenericContainer> {
+  private _listOfGenericContainer: { [key: string]: any; } = {}
+  constructor(allLine: string[], value: { [x: string]: any; }) {
+    allLine.forEach(
+      (a: string)=>{
+        this._listOfGenericContainer[a]=value[a]
+      })
+  }
+  get listOfGenericContainer(): { [p: string]: any } {
     return this._listOfGenericContainer;
   }
-  private _listOfGenericContainer:Array<GenericContainer>=[]
-  public push(element:GenericContainer){
-    this._listOfGenericContainer.push(element)
-  }
-  public length():number{
-    return this._listOfGenericContainer.length;
-  }
   public display(){
-    let output:String=""
-    this._listOfGenericContainer.forEach(
-      (a:GenericContainer)=>{
-        output+=a.fieldName+":"+a.content+"\n"
-      })
-    console.log(output)
+    console.log(this._listOfGenericContainer)
+  }
+  public get(key:string):any{
+    return this._listOfGenericContainer[key];
   }
 }

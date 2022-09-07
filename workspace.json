@@ -11,6 +11,7 @@
     "dynamic-form": "libs/dynamic-form",
     "entity": "libs/entity",
     "home": "libs/home",
+    "local-data": "libs/local-data",
     "menu": "libs/menu",
     "top-menu": "apps/top-menu",
     "top-menu-e2e": "apps/top-menu-e2e"

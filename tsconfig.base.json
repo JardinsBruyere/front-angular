@@ -22,6 +22,7 @@
       "@jardin-bruyere/dynamic-form": ["libs/dynamic-form/src/index.ts"],
       "@jardin-bruyere/entity": ["libs/entity/src/index.ts"],
       "@jardin-bruyere/home": ["libs/home/src/index.ts"],
+      "@jardin-bruyere/local-data": ["libs/local-data/src/index.ts"],
       "@jardin-bruyere/menu": ["libs/menu/src/index.ts"],
       "@jardin-bruyere/menu-sidenav": ["libs/menu/sidenav/src/index.ts"],
       "@jardin-bruyere/overlay-toolbar": ["libs/overlay/toolbar/src/index.ts"]

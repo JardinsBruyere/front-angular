@@ -5,7 +5,7 @@ import { DynamicFormModule } from '@jardin-bruyere/dynamic-form';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule, DynamicFormModule, RouterModule],
+  imports: [CommonModule, RouterModule, DynamicFormModule],
   declarations: [AdmiComponent],
   exports: [AdmiComponent],
 })

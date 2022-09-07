@@ -1,5 +1,13 @@
 <router-outlet></router-outlet>
-<jardin-bruyere-dynamic-form [name]="'Sensor'" [allLine]="['Type','Station','Nom']"></jardin-bruyere-dynamic-form><br>
-<jardin-bruyere-dynamic-form [name]="'SensorReading'" [allLine]="['SensorId','Value']"></jardin-bruyere-dynamic-form><br>
-<jardin-bruyere-dynamic-form [name]="'SensorTypes'" [allLine]="['Unit']"></jardin-bruyere-dynamic-form><br>
-<jardin-bruyere-dynamic-form [name]="'Station'" [allLine]="['Name']"></jardin-bruyere-dynamic-form>
+<jardin-bruyere-dynamic-form
+  [objet]="sensor"
+></jardin-bruyere-dynamic-form><br>
+<jardin-bruyere-dynamic-form
+  [objet]="sensorReading"
+></jardin-bruyere-dynamic-form><br>
+<jardin-bruyere-dynamic-form
+  [objet]="sensorType"
+></jardin-bruyere-dynamic-form><br>
+<jardin-bruyere-dynamic-form
+  [objet]="station"
+></jardin-bruyere-dynamic-form>
